@@ -1,5 +1,5 @@
 <ul>
-    {% for r in objects %}
+    {% for r in objects['results'] %}
         <li>
         <h2>Track Name: {{ r['trackName'] }}</h2>
         <div>See it on iTunes <a href="{{ r['trackViewUrl'] }}">here</a>.</div></li>
