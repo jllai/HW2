@@ -12,7 +12,7 @@
 ##### IMPORT STATEMENTS #####
 #############################
 
-from flask import Flask, request, render_template, flash
+from flask import Flask, request, render_template, flash, redirect, url_for
 from wtforms import StringField, SubmitField, RadioField, ValidationError
 from wtforms.validators import Required
 from flask_wtf import FlaskForm
@@ -31,6 +31,7 @@ app.config['SECRET_KEY'] = 'hardtoguessstring'
 ####################
 ###### FORMS #######
 ####################
+
 @app.route('/artistform')
 def artist_form():
 	return render_template('artistform.html')
